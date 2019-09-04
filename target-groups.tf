@@ -5,7 +5,7 @@ resource "aws_alb_target_group" "workshop_tg" {
   vpc_id   = "vpc-04836362"
 
   health_check {
-    interval            = "30"
+    interval            = var.health_check_interval
     port                = "443"
     protocol            = "HTTPS"
     timeout             = "10"
