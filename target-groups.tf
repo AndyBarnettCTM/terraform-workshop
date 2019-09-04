@@ -1,4 +1,4 @@
-resource "aws_alb_target_group" "web_active" {
+resource "aws_alb_target_group" "workshop_tg" {
   name     = "target-group-${terraform.workspace}"
   port     = "443"
   protocol = "HTTPS"
