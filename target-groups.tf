@@ -1,5 +1,5 @@
 resource "aws_alb_target_group" "workshop_tg" {
-  name     = "target-group-${terraform.workspace}"
+  name     = "workshop"
   port     = "443"
   protocol = "HTTPS"
   vpc_id   = "vpc-04836362"
@@ -15,7 +15,7 @@ resource "aws_alb_target_group" "workshop_tg" {
   }
 
   tags = {
-    Name    = "target_group_${terraform.workspace}"
+    Name    = "workshop"
     service = "workshop"
   }
 }

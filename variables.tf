@@ -3,5 +3,9 @@ variable "health_check_interval" {
 }
 
 variable "health_check_timeout" {
+  default = "10"
+}
 
+variable "target_group_name" {
+  default = "workshop"
 }
