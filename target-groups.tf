@@ -8,7 +8,7 @@ resource "aws_alb_target_group" "workshop_tg" {
     interval            = var.health_check_interval
     port                = "443"
     protocol            = "HTTPS"
-    timeout             = "10"
+    timeout             = var.health_check_timeout
     healthy_threshold   = "2"
     unhealthy_threshold = "2"
     matcher             = "200"
