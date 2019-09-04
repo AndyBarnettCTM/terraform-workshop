@@ -3,8 +3,6 @@ resource "aws_alb_target_group" "web_active" {
   port     = "443"
   protocol = "HTTPS"
   vpc_id   = "vpc-04836362"
-  # "${data.terraform_remote_state.network.vpc_id}"
-  deregistration_delay = 30
 
   health_check {
     interval            = "30"
